@@ -84,10 +84,10 @@ function createMarkers(response) {
   };
    // create marker
   var myMarker = L.circleMarker([location[index].geometry.coordinates[1], location[index].geometry.coordinates[0]], geojsonMarkerOptions)
-    .bindPopup("<h3>" + location[index].properties.place + "</h3><hr>" +
+    .bindPopup(("<h3>" + location[index].properties.place + "</h3><hr>" +
       "<p>Time: " + new Date(location[index].properties.time) + "</p>" +
       "<p>Depth (km): " + location[index].geometry.coordinates[2] + "</p>" +
-      "<p>Magnitude: " + mag + "</p>");
+      "<p>Magnitude: " + mag + "</p>"));
      // Add the marker to the bikeMarkers array
   earthquakeMarkers.push(myMarker);
 
